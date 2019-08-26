@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../src/index.css";
-import CreateTodo from "./components/create-todo.component";
-import EditTodo from "./components/edit-todo.component";
-import TodosList from "./components/todos-list.component";
+import CreateExercise from "./components/create-exercise.component";
+import EditExercise from "./components/edit-exercise.component";
+import WorkoutPlan from "./components/workout-plan.component";
 
 // import logo from "./logo.png";
 
@@ -25,14 +25,14 @@ class App extends Component {
                   <Link to="/" className="nav-link">Workout Plan</Link>
                 </li>
                 <li className="navbar-item">
-                  <Link to="/create" className="nav-link">Create New Plan</Link>
+                  <Link to="/create" className="nav-link">Create New Exercise</Link>
                 </li>
               </ul>
             </div>
          </nav>
-         <Route path="/" exact component={TodosList} />
-        <Route path="/edit/:id" component={EditTodo} />
-        <Route path="/create" component={CreateTodo} />
+         <Route path="/" exact component={WorkoutPlan} />
+        <Route path="/edit/:id" component={EditExercise} />
+        <Route path="/create" component={CreateExercise} />
         </div>
       </Router>
     );
